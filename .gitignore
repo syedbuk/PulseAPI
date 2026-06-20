@@ -1,0 +1,170 @@
+# ====================================================================
+# Docker
+# ====================================================================
+.dockerignore
+*.dockerfile
+docker-compose.override.yml
+# Container persistent data data volumes
+/data/
+
+# ====================================================================
+# Python
+# ====================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# pytest / coverage
+.cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ====================================================================
+# React / Node.js
+# ====================================================================
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production build
+build/
+dist/
+out/
+
+# Next.js/Razzle/Nuxt.js build output
+.next/
+.nuxt/
+
+# Gatsby files
+.cache/
+public/
+
+# Local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.visualstudio
+.eslintcache
+
+# ====================================================================
+# Java
+# ====================================================================
+# Compiled class file
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://java.com
+hs_err_pid*
+replay_pid*
+
+# Build tools (Maven)
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+pom.xml.note
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Build tools (Gradle)
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ====================================================================
+# Editors, IDEs, and OS (General)
+# ====================================================================
+# JetBrains (IntelliJ, PyCharm, WebStorm)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+*.code-workspace
+
+# Eclipse
+.metadata
+.classpath
+.project
+.settings/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Screenshots
+/Screenshot/
