@@ -1,0 +1,194 @@
+Perfect. That's exactly how I'd approach it.
+
+One thing, though: **let's organize it like a real production repository from Day 1.** It'll save you from refactoring later.
+
+I recommend this structure:
+
+```text
+pulse-api/
+│
+├── frontend/                 # React + TypeScript
+│
+├── backend/                  # Spring Boot
+│
+├── ai-service/               # FastAPI
+│
+├── database/
+│   ├── init/
+│   │   └── init.sql
+│   └── README.md
+│
+├── nginx/                    # Later
+│
+├── docs/
+│   ├── architecture.md
+│   ├── api-design.md
+│   └── decisions.md
+│
+├── .github/
+│   └── workflows/            # Later (CI/CD)
+│
+├── docker-compose.yml
+├── .env.example
+├── .gitignore
+├── README.md
+└── LICENSE
+```
+
+---
+
+## One thing I want you to do (it will pay off later)
+
+Create a `docs` folder **before writing any code**.
+
+Most developers skip documentation until the end (or never write it). We'll treat it as part of the project.
+
+For example:
+
+### `architecture.md`
+
+This will answer questions like:
+
+* Why did we separate Java and Python?
+* Why use Docker Compose?
+* Why React instead of server-side rendering?
+* How do the services communicate?
+
+---
+
+### `api-design.md`
+
+We'll document APIs **before** implementing them.
+
+Example:
+
+```http
+GET /api/health
+```
+
+Response:
+
+```json
+{
+  "backend": "UP",
+  "database": "UP",
+  "python": "UP"
+}
+```
+
+---
+
+### `decisions.md`
+
+This is something many senior engineers do.
+
+Whenever we make a design choice, we'll record it.
+
+Example:
+
+```text
+Decision #001
+
+Use PostgreSQL instead of MySQL.
+
+Reason:
+- Better JSON support
+- Strong ecosystem with Spring Boot
+- Widely used in cloud-native applications
+```
+
+A few months later, you'll remember *why* you made that choice.
+
+---
+
+# Git Strategy
+
+We'll also keep a clean commit history.
+
+Instead of:
+
+```text
+fixed stuff
+```
+
+We'll use meaningful commits like:
+
+```text
+chore: initialize project structure
+```
+
+```text
+feat: add Spring Boot health endpoint
+```
+
+```text
+feat: configure Docker Compose services
+```
+
+```text
+docs: add architecture overview
+```
+
+That history tells the story of how the project evolved.
+
+---
+
+# What Phase 1 will look like
+
+We'll take it in small, manageable steps:
+
+### Step 1
+
+* Create repository
+* Create folder structure
+* Initialize Git
+
+### Step 2
+
+* Create React app
+
+### Step 3
+
+* Create Spring Boot app
+
+### Step 4
+
+* Create FastAPI app
+
+### Step 5
+
+* Create PostgreSQL container
+
+### Step 6
+
+* Write `docker-compose.yml`
+
+### Step 7
+
+* Make all services communicate
+
+### Step 8
+
+* Build a React status page showing:
+
+  * 🟢 Backend
+  * 🟢 Database
+  * 🟢 AI Service
+
+Only after all of that works will we move to authentication.
+
+---
+
+## One promise from me
+
+I'm **not** going to give you copy-paste solutions unless you ask for them.
+
+Instead, I'll mentor you as if we're coworkers:
+
+* I'll explain the reasoning behind each decision.
+* I'll ask you questions to help you think through the design.
+* I'll point out trade-offs, just like in a real code review.
+
+By the time we finish this project, the goal isn't just to have a deployed application—it's for you to be able to explain every architectural decision in an interview with confidence.
+
+I'm genuinely excited about this project. It has enough depth to teach you how professional software is built without becoming overwhelming. We'll build it one solid step at a time.
