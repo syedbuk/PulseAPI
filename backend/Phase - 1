@@ -192,3 +192,28 @@ Instead, I'll mentor you as if we're coworkers:
 By the time we finish this project, the goal isn't just to have a deployed application—it's for you to be able to explain every architectural decision in an interview with confidence.
 
 I'm genuinely excited about this project. It has enough depth to teach you how professional software is built without becoming overwhelming. We'll build it one solid step at a time.
+
+
+                      Browser
+                         │
+                         ▼
+                  React Frontend
+                         │
+              GET /api/health
+                         │
+                         ▼
+                Spring Boot API
+                 │           │
+                 │           │
+                 ▼           ▼
+          PostgreSQL     Python FastAPI
+                 │           │
+                 └──────┬────┘
+                        │
+                Health Information
+                        │
+                        ▼
+                 Spring Boot API
+                        │
+                        ▼
+                  React Dashboard
