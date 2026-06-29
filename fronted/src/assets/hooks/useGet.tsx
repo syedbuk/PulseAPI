@@ -1,13 +1,9 @@
 import {useEffect, useState} from "react";
 
-interface HealthStatus{
-    springboot: boolean;
-    ai: boolean;
-    database: boolean;
-}
 
-export function useGet(url: string) {
-  const [data, setData] = useState<HealthStatus|null>(null);
+
+export function useGet<T>(url: string) {
+  const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

@@ -1,11 +1,14 @@
+import { useHealth } from "../api/healthApi"
 
-import { useGet } from "../hooks/useGet";
 
 function Status() {
 
 
 ///send a request to backend api - to check all status
-const  {data, loading, error} = useGet("httpsetc")
+const  {data, loading, error} = useHealth();
+
+if (loading) return <div>Loading...</div>;
+if (error) return <div>Error: {error}</div>;
 
    
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css'
-import Status from './assets/components/status'
+import Status from './assets/pages/Status'
 
 function App() {
  
